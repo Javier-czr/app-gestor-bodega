@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Editar Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-label >
+        <ion-input [(ngModel)]="editarUser.usuario" label="Usuario" labelPlacement="floating" type="text" value="{{usuario}}"></ion-input>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-input [(ngModel)]="editarUser.nombre" label="Nombre" labelPlacement="floating" type="text" value="{{nombre}}"></ion-input>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-input [(ngModel)]="editarUser.apellido" label="Apellido" labelPlacement="floating" type="text" value="{{apellido}}"></ion-input>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-input [(ngModel)]="editarUser.telefono" label="Telefono" labelPlacement="floating" type="number" value="{{telefono}}"></ion-input>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-input [(ngModel)]="editarUser.correo" label="Correo electronico" labelPlacement="floating" type="email" value="{{correo}}"></ion-input>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        <ion-label>
+          <ion-input [(ngModel)]="editarUser.contrasena" label="contrasena" labelPlacement="floating" type="password" value="{{contrasena}}"></ion-input>
+        </ion-label>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="guardar()" expand="block" fill="clear" shape="round">
+    Guardar
+  </ion-button>
+  <ion-button (click)="salir()" expand="block" fill="clear" shape="round">
+    Cancelar
+  </ion-button>
+</ion-content>

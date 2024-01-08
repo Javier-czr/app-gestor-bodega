@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()" color="primary">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Registrar Proveedor</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Registrar Proveedor</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-item>
+        <ion-input type="text" label="Nombre" labelPlacement="floating" [(ngModel)]="supplier.nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" label="Apellido" labelPlacement="floating" [(ngModel)]="supplier.apellido"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" label="Rut" labelPlacement="floating" [(ngModel)]="supplier.rut"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" label="Empresa" labelPlacement="floating" [(ngModel)]="supplier.empresa"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="number" label="Cantidad de productos" labelPlacement="floating" [(ngModel)]="supplier.cantidadProductos"></ion-input>
+      </ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <ion-button expand="block" color="primary" (click)="ingresarProveedor()">Guardar</ion-button>
+          </ion-col>
+          <ion-col size="12">
+            <ion-button expand="block" color="primary" routerLink="/home">Cancelar</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

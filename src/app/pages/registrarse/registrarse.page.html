@@ -1,0 +1,39 @@
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+    <ion-card-header>
+      <ion-card-title class="ion-text-center">Registrarse</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-item>
+        <ion-input [(ngModel)]="registerUser.usuario" type="text" label="Usuario" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="registerUser.nombre" type="text" label="Nombre" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="registerUser.apellido" type="text" label="Apellido" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="registerUser.telefono" type="number" label="Telefono" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="registerUser.correo" type="email" label="Correo Electronico" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input [(ngModel)]="registerUser.contrasena" type="password" label="Contrasena" labelPlacement="floating"></ion-input>
+      </ion-item>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="12">
+            <ion-button (click)="registrar()" expand="block" color="primary">Aceptar</ion-button>
+          </ion-col>
+          <ion-col size="12">
+            <ion-button expand="block" color="primary" routerLink="/login">Cancelar</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="mostrarMenu()" color="primary">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-avatar slot="start">
+      <img src="https://www.gravatar.com/avatar?d=mp" />
+    </ion-avatar>
+    <ion-label>
+      <h2 *ngIf="usuario">Usuario: {{usuario.usuario}}</h2>
+      <p *ngIf="registroUser">Correo: {{registro.correo}}</p>
+    </ion-label>
+  </ion-item>
+</ion-content>
